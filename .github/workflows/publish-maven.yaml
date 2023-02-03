@@ -5,6 +5,11 @@ on:
     tags:
       - '*'
 
+# Allow one concurrent deployment
+concurrency:
+  group: "deploy-maven"
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-22.04
