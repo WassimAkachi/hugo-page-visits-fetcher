@@ -6,7 +6,7 @@
 
     <groupId>com.techeule.cms</groupId>
     <artifactId>hugo-page-visits-fetcher</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
 
     <contributors>
         <contributor>
