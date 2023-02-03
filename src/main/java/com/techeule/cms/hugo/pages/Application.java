@@ -1,8 +1,6 @@
 package com.techeule.cms.hugo.pages;
 
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.net.URI;
 import java.util.Collection;
 import java.util.HashMap;
@@ -22,7 +20,7 @@ import com.techeule.cms.hugo.pages.entity.LineItem;
 public class Application {
 
     private static final FileHugoListPagesFetcher fileHugoListPagesFetcher = new FileHugoListPagesFetcher(new OpenCsvHugoListParser());
-    private static PageStatisticFetcher pageStatisticFetcher = null;
+    private static PageStatisticFetcher pageStatisticFetcher;
     private static final StatisticsWriter statisticsWriter = new StatisticsWriter();
 
     public static void main(final String[] args) {
@@ -45,6 +43,7 @@ public class Application {
                                                                     final Collection<LineItem> lineItems) {
         final Map<String, MatomoPageUrlResponse> statistics = new HashMap<>(lineItems.size());
         lineItems.forEach(li -> {
+            System.out.println("fetching statistics for " + li.getPermalink());
             final var matomoPageUrlResponses = pageStatisticFetcher.fetch(siteId,
                                                                           li.getPermalink(),
                                                                           "range",
@@ -59,11 +58,10 @@ public class Application {
 
     private static void writeStatistics(final String hugoDataFile,
                                         final Map<String, MatomoPageUrlResponse> statistics) {
+        System.out.println("start writing statistics in to " + hugoDataFile);
         try (final var output = new FileOutputStream(hugoDataFile)) {
             statisticsWriter.write(output, statistics);
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }

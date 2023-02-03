@@ -29,7 +29,7 @@ public class PageStatisticFetcher {
         final var matomoPageUrlRequest = MatomoPageUrlRequest.builder()
                                                              .module("API")
                                                              .method("Actions.getPageUrl")
-                                                             .format("json")
+                                                             .format("JSON")
                                                              .idSite(siteId)
                                                              .period(period)
                                                              .date(date)
