@@ -12,7 +12,7 @@ class PageStatisticFetcherTest {
 
     PageStatisticFetcherTest() {
         final var matomoRestClientFactory = new MatomoRestClientFactory(URI.create("https://wat.techeule.de"));
-        final var actions = matomoRestClientFactory.createActionsClient();
+        final var actions = matomoRestClientFactory.crearPlainJavaActions();
         final var authToken = System.getenv("MATOMO_TOKEN");
         pageStatisticFetcher = new PageStatisticFetcher(actions, authToken);
     }

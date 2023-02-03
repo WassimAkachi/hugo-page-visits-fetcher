@@ -32,7 +32,7 @@ public class Application {
         final var hugoDataFile = config.getValue("hugo.dataFile", String.class);
 
         final var matomoRestClientFactory = new MatomoRestClientFactory(URI.create(baseUri));
-        pageStatisticFetcher = new PageStatisticFetcher(matomoRestClientFactory.createActionsClient(), authToken);
+        pageStatisticFetcher = new PageStatisticFetcher(matomoRestClientFactory.crearPlainJavaActions(), authToken);
 
         final var lineItems = fileHugoListPagesFetcher.readAll(hugoPagesFile);
         final var statistics = getStatistics(siteId, lineItems);
