@@ -26,20 +26,20 @@ class OpenCsvHugoListParserTest {
         Assertions.assertThat(lineItems).hasSize(5);
 
         assertLineItem(lineItems.get(0),
-                       "content/posts/20230131-001_avro-serializer-deserializer/index.md",
-                       "Avro Serializer Deserializer",
-                       "2023-01-31T22:03:03+01:00",
-                       "2023-01-31T22:03:03+01:00",
-                       true,
-                       "https://techeule.com/posts/20230131-001_avro-serializer-deserializer/");
+                       "content/posts/Simple-Java-Avro-Serializer-Deserializer/index.md",
+                       "Simple Java Avro Serializer Deserializer",
+                       "2023-02-03T22:50:03+01:00",
+                       "2023-02-03T22:50:03+01:00",
+                       false,
+                       "https://techeule.com/posts/Simple-Java-Avro-Serializer-Deserializer/");
 
         assertLineItem(lineItems.get(1),
-                       "content/posts/20230128-001_multiple-git-configurations-conditional_includes/index.md",
+                       "content/posts/multiple-git-configurations-conditional_includes/index.md",
                        "Multiple Git Configurations - conditional includes",
                        "2023-01-28T15:00:00+01:00",
                        "2023-01-28T15:00:00+01:00",
                        false,
-                       "https://techeule.com/posts/20230128-001_multiple-git-configurations-conditional_includes/");
+                       "https://techeule.com/posts/multiple-git-configurations-conditional_includes/");
 
         assertLineItem(lineItems.get(2),
                        "content/about/index.md",
@@ -50,12 +50,12 @@ class OpenCsvHugoListParserTest {
                        "https://techeule.com/about/");
 
         assertLineItem(lineItems.get(3),
-                       "content/posts/20230121-001_hello-world/index.md",
+                       "content/posts/hello-world/index.md",
                        "Hello World",
                        "2023-01-26T22:40:00+01:00",
                        "2023-01-26T22:40:00+01:00",
                        false,
-                       "https://techeule.com/posts/20230121-001_hello-world/");
+                       "https://techeule.com/posts/hello-world/");
 
         assertLineItem(lineItems.get(4),
                        "content/about-wassim/index.md",

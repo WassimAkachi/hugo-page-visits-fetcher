@@ -1,6 +1,6 @@
 path,slug,title,date,expiryDate,publishDate,draft,permalink
-content/posts/20230131-001_avro-serializer-deserializer/index.md,,Avro Serializer Deserializer,2023-01-31T22:03:03+01:00,0001-01-01T00:00:00Z,2023-01-31T22:03:03+01:00,true,https://techeule.com/posts/20230131-001_avro-serializer-deserializer/
-content/posts/20230128-001_multiple-git-configurations-conditional_includes/index.md,,Multiple Git Configurations - conditional includes,2023-01-28T15:00:00+01:00,0001-01-01T00:00:00Z,2023-01-28T15:00:00+01:00,false,https://techeule.com/posts/20230128-001_multiple-git-configurations-conditional_includes/
+content/posts/Simple-Java-Avro-Serializer-Deserializer/index.md,,Simple Java Avro Serializer Deserializer,2023-02-03T22:50:03+01:00,0001-01-01T00:00:00Z,2023-02-03T22:50:03+01:00,false,https://techeule.com/posts/Simple-Java-Avro-Serializer-Deserializer/
+content/posts/multiple-git-configurations-conditional_includes/index.md,,Multiple Git Configurations - conditional includes,2023-01-28T15:00:00+01:00,0001-01-01T00:00:00Z,2023-01-28T15:00:00+01:00,false,https://techeule.com/posts/multiple-git-configurations-conditional_includes/
 content/about/index.md,,About,2023-01-26T22:40:00+01:00,0001-01-01T00:00:00Z,2023-01-26T22:40:00+01:00,false,https://techeule.com/about/
-content/posts/20230121-001_hello-world/index.md,,Hello World,2023-01-26T22:40:00+01:00,0001-01-01T00:00:00Z,2023-01-26T22:40:00+01:00,false,https://techeule.com/posts/20230121-001_hello-world/
+content/posts/hello-world/index.md,,Hello World,2023-01-26T22:40:00+01:00,0001-01-01T00:00:00Z,2023-01-26T22:40:00+01:00,false,https://techeule.com/posts/hello-world/
 content/about-wassim/index.md,,Wassim Akachi,2023-01-26T22:40:00+01:00,0001-01-01T00:00:00Z,2023-01-26T22:40:00+01:00,false,https://techeule.com/about-wassim/

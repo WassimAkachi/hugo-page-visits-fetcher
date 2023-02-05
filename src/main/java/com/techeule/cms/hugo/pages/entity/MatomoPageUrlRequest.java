@@ -1,4 +1,4 @@
-package com.techeule.cms.hugo.pages.control.matono;
+package com.techeule.cms.hugo.pages.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
