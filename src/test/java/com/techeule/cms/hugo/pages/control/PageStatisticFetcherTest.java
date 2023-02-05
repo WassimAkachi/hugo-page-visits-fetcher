@@ -20,7 +20,7 @@ import com.techeule.cms.hugo.pages.entity.MatomoPageUrlResponse;
 
 class PageStatisticFetcherTest {
     private final String authToken = UUID.randomUUID().toString();
-    private final MatonoActionsClient actionsMock = mock(MatonoActionsClient.class);
+    private final MatomoActionsClient actionsMock = mock(MatomoActionsClient.class);
     private final String siteId = UUID.randomUUID().toString();
 
     @Test
