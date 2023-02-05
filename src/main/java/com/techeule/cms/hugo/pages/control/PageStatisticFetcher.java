@@ -10,18 +10,18 @@ import com.techeule.cms.hugo.pages.entity.MatomoPageUrlRequest;
 import com.techeule.cms.hugo.pages.entity.MatomoPageUrlResponse;
 
 public class PageStatisticFetcher {
-    private final MatonoActionsClient actionsClient;
+    private final MatomoActionsClient actionsClient;
     private final String authToken;
     private final String siteId;
     private final Supplier<ZonedDateTime> dateTimeSupplier;
 
-    public PageStatisticFetcher(final MatonoActionsClient actionsClient,
+    public PageStatisticFetcher(final MatomoActionsClient actionsClient,
                                 final String authToken,
                                 final String siteId) {
         this(actionsClient, authToken, siteId, ZonedDateTime::now);
     }
 
-    PageStatisticFetcher(final MatonoActionsClient actionsClient,
+    PageStatisticFetcher(final MatomoActionsClient actionsClient,
                          final String authToken,
                          final String siteId,
                          final Supplier<ZonedDateTime> dateTimeSupplier) {

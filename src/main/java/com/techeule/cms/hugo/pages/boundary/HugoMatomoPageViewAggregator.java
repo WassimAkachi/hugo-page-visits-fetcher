@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.techeule.cms.hugo.pages.control.Configurations;
-import com.techeule.cms.hugo.pages.control.MatonoActionsClient;
+import com.techeule.cms.hugo.pages.control.MatomoActionsClient;
 import com.techeule.cms.hugo.pages.control.OpenCsvHugoListParser;
 import com.techeule.cms.hugo.pages.control.PageStatisticFetcher;
 import com.techeule.cms.hugo.pages.entity.LineItem;
@@ -19,7 +19,7 @@ public class HugoMatomoPageViewAggregator {
 
     private static final Jsonb JSONB = JsonbBuilder.newBuilder().build();
     private final Configurations configurations;
-    private final MatonoActionsClient matonoActionsClient;
+    private final MatomoActionsClient matomoActionsClient;
     private final PageStatisticFetcher pageStatisticFetcher;
     private final OpenCsvHugoListParser openCsvHugoListParser = new OpenCsvHugoListParser();
     private final String hugoPagesFile;
@@ -34,8 +34,8 @@ public class HugoMatomoPageViewAggregator {
         hugoPagesFile = configurations.getHugoPagesList();
         hugoDataFile = configurations.getHugoDataFile();
         siteId = configurations.getMatomoSiteId();
-        matonoActionsClient = new MatonoActionsClient(baseUri);
-        pageStatisticFetcher = new PageStatisticFetcher(matonoActionsClient, authToken, siteId);
+        matomoActionsClient = new MatomoActionsClient(baseUri);
+        pageStatisticFetcher = new PageStatisticFetcher(matomoActionsClient, authToken, siteId);
     }
 
     public void generate() {

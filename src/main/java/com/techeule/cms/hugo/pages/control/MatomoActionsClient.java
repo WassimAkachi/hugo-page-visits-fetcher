@@ -15,12 +15,12 @@ import com.techeule.cms.hugo.pages.entity.MatomoPageUrlResponse;
 import jakarta.json.bind.Jsonb;
 import jakarta.json.bind.JsonbBuilder;
 
-public class MatonoActionsClient {
+public class MatomoActionsClient {
     private static final Jsonb JSONB = JsonbBuilder.newBuilder().build();
     private static final HttpClient httpClient = HttpClient.newBuilder().build();
     private final URI matomoBaseUri;
 
-    public MatonoActionsClient(final URI matomoBaseUri) {
+    public MatomoActionsClient(final URI matomoBaseUri) {
         this.matomoBaseUri = matomoBaseUri;
     }
 
@@ -51,10 +51,10 @@ public class MatonoActionsClient {
                                       "&format=" + request.getFormat() +
                                       "&module=" + request.getModule() +
                                       "&method=" + request.getMethod() +
-                                      "&pageUrl=" + request.getPageUrl() +
                                       "&idSite=" + request.getIdSite() +
                                       "&period=" + request.getPeriod() +
-                                      "&date=2023-01-01,2069-12-31");
+                                      "&date=" + request.getDate() +
+                                      "&pageUrl=" + request.getPageUrl());
         } catch (final MalformedURLException e) {
             throw new RuntimeException(e);
         }
